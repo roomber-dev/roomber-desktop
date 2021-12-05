@@ -1,0 +1,24 @@
+.horizontalMenu {
+	z-index: 4;
+	background: rgba(27,27,27,0.5);
+	border-radius: 4px;
+	backdrop-filter: blur(30px);
+	display: flex;
+}
+
+.horizontalMenuItem {
+	width: 24px;
+	height: 24px;
+	background: red;
+	margin: 4px;
+	background: rgba(27,27,27,0.7);
+	border-radius: 4px;
+	border: 1px solid rgba(255,255,255,0.1);
+	align-items: center;
+	justify-content: center;
+	transition: 0.25s background;
+}
+
+.horizontalMenuItem:hover {
+	background: rgba(38,38,38,0.7);
+}

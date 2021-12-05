@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML Meta Tags -->
+    <title>Roomber</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Roomber,chat,talk,message,friends,fun">
+    <meta name="author" content="neksodebe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Create a free Roomber account and discover a new messaging app that's better and faster than your normal phone messaging app.">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roomber">
+    <meta property="og:description"
+        content="Create a free Roomber account and discover a new messaging app that's better and faster than your normal phone messaging app.">
+        <meta property="og:image" content="https://i.imgur.com/hDx7FNI.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Roomber">
+    <meta name="twitter:description"
+        content="Create a free Roomber account and discover a new messaging app that's better and faster than your normal phone messaging app.">
+        <meta name="twitter:image" content="https://i.imgur.com/hDx7FNI.png">
+    <meta content="#9b34ba" data-react-helmet="true" name="theme-color" />
+
+    <script src="https://roomber-dev.herokuapp.com/socket.io/socket.io.js"></script>
+    <script src="config.js"></script> <!-- NO!! I HAVE TO BE BEFORE EVERY SCRIPT!! -->
+    <script src="js/utilities.js"></script> <!-- THIS HAS TO BE BEFORE EVERY SCRIPT!! -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/setup.css">
+    <link rel="stylesheet" href="components/popup.css">
+    <link rel="stylesheet" href="components/horizontalMenu.css">
+    <link rel="stylesheet" href="components/minAdminPanel.css">
+    <link rel="stylesheet" href="components/adminPanel.css">
+    <link rel="stylesheet" href="twemoji-amazing.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="js/fun.js"></script>
+</head>
+
+<body>
+    <div id="loading-back">
+        <img alt="" src="assets/roomber-logo.png" id="loading-image">
+        <div id="fun-fact-container">
+            <p id="fun-fact-title">Did you know</p>
+            <p id="fun-fact"></p>
+        </div>
+    </div>
+
+    <div id="minAdminPanel">
+        <div class="titlebar" data-dragger="true">
+            <div class="title"><i class="megasmall material-icons">security</i>Admin Panel</div>
+            <div class="close">
+                <i class="megasmall material-icons">close</i>
+            </div>
+        </div>
+        <button class="button" id="remove-all-messages"><i class="megasmall material-icons">clear_all</i>Clear
+            Messages</button>
+        <button class="button" id="broadcast"><i class="megasmall material-icons">announcement</i>Broadcast</button>
+        <button class="button" id="full-panel"><i class="megasmall material-icons">security</i>Full Panel</button>
+    </div>
+
+    <div class="topbar-main flex-down">
+        <div id="topbar" class="glass">
+            <div id="topbar-content">
+                <div id="by-the-logo">
+                    <img id="roomber-logo" src="assets/roomber-logo.png">
+                </div>
+                <div id="servers">
+                    <div class="topbar-sep"></div>
+                    <div id="server-list">
+                    </div>
+                    <div class="topbar-sep"></div>
+                </div>
+                <div id="login">
+                    Not logged in
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <div id="channels" class="glass">
+                <ul>
+                </ul>
+            </div>
+            <div id="chat-area">
+                <script src="components/minAdminPanel.js"></script>
+                <div id="messages">
+                </div>
+                <div id="message-box" class="glass">
+                    <div class="message-input">
+                        <input id="message" class="glass" placeholder="Message" autocomplete="off" />
+                        <button id="send" class="button"><i class="megasmall material-icons">send</i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="setup-container"></div>
+
+    <script src="components/popup.js"></script>
+    <script src="components/horizontalMenu.js"></script>
+    <script src="components/setup.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/client.js"></script>
+    <script src="js/communication.js"></script>
+    <script src="js/connectionEvents.js"></script>
+    <script src="components/adminPanel.js"></script>
+
+</body>
+
+</html>
