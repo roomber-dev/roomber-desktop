@@ -6,12 +6,16 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1000,
-    height: 800,
+    height: 600,
+    minWidth: 650,
+    minHeight: 500,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
     },
     autoHideMenuBar: true,
-    icon:'assets/roomber-logo.png'
+    icon:'assets/roomber-logo.png',
+    titleBarStyle: "hidden"
   })
 
   // and load the index.html of the app.
