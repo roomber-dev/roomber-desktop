@@ -31,6 +31,7 @@ body,
 #titlebar-buttons {
 	display: flex;
 	height: 100%;
+	-webkit-app-region: no-drag;
 }
 
 #titlebar-buttons div {

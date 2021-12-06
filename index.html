@@ -30,8 +30,8 @@
     <meta content="#9b34ba" data-react-helmet="true" name="theme-color" />
 
     <script src="https://roomber-dev.herokuapp.com/socket.io/socket.io.js"></script>
-    <script src="config.js"></script> <!-- NO!! I HAVE TO BE BEFORE EVERY SCRIPT!! -->
-    <script src="js/utilities.js"></script> <!-- THIS HAS TO BE BEFORE EVERY SCRIPT!! -->
+    <script src="js/platform.js"></script>
+    <script src="js/utilities.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="components/setup.css">
@@ -55,6 +55,8 @@
             <img src="assets/roomberfull.png" alt="">
             <div id="blank"></div>
             <div id="titlebar-buttons">
+                <div id="minimize-app"><i class="megasmall material-icons">remove</i></div>
+                <div id="size-app"><i class="megasmall material-icons">crop_square</i></div>
                 <div id="close-app"><i class="megasmall material-icons">close</i></div>
             </div>
         </div>

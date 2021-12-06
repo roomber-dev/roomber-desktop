@@ -11,5 +11,20 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-const {contextBridge, remote} = require('electron');
-contextBridge.exposeInMainWorld("remote", remote);
+
+  
+const {contextBridge, ipcRenderer} = require("electron");
+
+contextBridge.exposeInMainWorld(
+  "api", {
+      send: (channel, data) => {
+          let validChannels = ["minimize",
+                               "maximize",
+                               "restore",
+                               "close"];
+          if (validChannels.includes(channel)) {
+              ipcRenderer.send(channel, data);
+          }
+      }
+  }
+);

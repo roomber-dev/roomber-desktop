@@ -2,10 +2,6 @@ $(document).ready(function() {
 	loginInit();
 });
 
-$('#close-app').on('click', function(e) {
-    window.remote.getCurrentWindow().close();
-});
-
 canEditAndDeleteAny = false;
 toFetch = 0;
 fetchingMessages = false;
