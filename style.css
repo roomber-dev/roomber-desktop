@@ -652,7 +652,8 @@ body, #body {
 .embed .img-container {
 	display: flex;
 	justify-content: center;
-	padding-left: 10px;
+	align-self: center;
+	width: 100%;
 }
 
 .embed img {
