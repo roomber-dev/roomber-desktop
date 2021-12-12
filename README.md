@@ -14,6 +14,19 @@ Create a free Roomber account and discover a new messaging app that's better tha
 - Desktop App
 - Mobile App
 
+### How to compile
+
+Remember to `npm install` before you try it!
+
+
+In the terminal, use
+`npx electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]`
+
+![Used NPM Package](https://www.npmjs.com/package/electron-packager)
+
+<span style="color:red;font-weight:bold">DISCLAIMER</span>
+ALWAYS remember to put the compiled version in .gitignore
+
 ### Made by
 
 - neksodebe (Founder and Programmer)
