@@ -14,7 +14,7 @@ Create a free Roomber account and discover a new messaging app that's better tha
 - Roomber Xtra (paid subscription)
 - Desktop App
 - Mobile App
-
+==
 ### How to compile
 
 Remember to `npm install` before you try it!
@@ -27,7 +27,7 @@ In the terminal, use
 
 ### DISCLAIMER
 ALWAYS remember to put the compiled version in .gitignore
-
+==
 ### Made by
 
 - neksodebe (Founder and Programmer)
