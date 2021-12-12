@@ -15,7 +15,6 @@ Create a free Roomber account and discover a new messaging app that's better tha
 - Desktop App
 - Mobile App
 
-==
 ### How to compile
 
 Remember to `npm install` before you try it!
@@ -27,8 +26,11 @@ In the terminal, use
 [Used NPM Package](https://www.npmjs.com/package/electron-packager)
 
 ### DISCLAIMER
+
 ALWAYS remember to put the compiled version in .gitignore
+
 ==
+
 ### Made by
 
 - neksodebe (Founder and Programmer)
