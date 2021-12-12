@@ -76,9 +76,9 @@ function addServer(server) {
 	let idx = servers.push(server) - 1;
 
 	if(server["picture"]) {
-		$("#server-list").append(`<img id="${server["_id"]}" title="${server["name"]}" onclick="openServer(${idx})" alt="${server["name"]}" class="server" src="${server["picture"]}"/>`);
+		$("#server-list").prepend(`<img id="${server["_id"]}" title="${server["name"]}" onclick="openServer(${idx})" alt="${server["name"]}" class="server" src="${server["picture"]}"/>`);
 	} else {
-		$("#server-list").append(`<div id="${server["_id"]}" title="${server["name"]}" onclick="openServer(${idx})" alt="${server["name"]}" class="server basic"><p class="no-select">${server["name"].at(0).toUpperCase()}</p></div>`);
+		$("#server-list").prepend(`<div id="${server["_id"]}" title="${server["name"]}" onclick="openServer(${idx})" alt="${server["name"]}" class="server basic"><p class="no-select">${server["name"].at(0).toUpperCase()}</p></div>`);
 	}
 
 	$.post(serverUrl+"/getChannels", {server: server._id}, function(channels) {
@@ -191,15 +191,34 @@ loaded(function() {
 			}
 		}
 	});
-	$("#by-the-logo").append('<button class="button" id="avatar-btn"><i class="megasmall material-icons">add_a_photo</i></button>');
+	//$("#by-the-logo").append('<button class="button" id="avatar-btn"><i class="megasmall material-icons">add_a_photo</i></button>');
 	$("#by-the-logo").append('<button class="button" id="dm-btn"><i class="megasmall material-icons">person</i></button>');
-	$("#by-the-logo #avatar-btn").click(function() {
+	$("#avatar-btn").click(function() {
 		setupPickProfilePicture();
 	});
 	$("#by-the-logo #dm-btn").click(function() {
 		$("#channels ul").html("");
 		$("#messages").html("");
 		getChats();
+	});
+
+	$(".new-server").click(function() {
+		popup("Join server", `
+			<input type="text" placeholder="Server ID" id="server" class="textbox"/>
+		`, [{
+			label: "Cancel",
+			click: function(p) {
+				p.close();
+			}
+		}, {
+			label: "OK",
+			click: function(p) {
+				p.close();
+				setTimeout(function() {
+					joinServer($("#server").val());
+				}, 500);
+			}
+		}])
 	});
 })
 
@@ -295,15 +314,15 @@ function createEmbed(messageID,  url, lang) {
         if(embed) {
             console.log(embed);
             cclog("loaded embed " + embed.ogTitle, "debug");
-            $(`#messages #${messageID} .embeds`).html("");
-            $(`#messages #${messageID} .embeds`).append(generateEmbed(embed));
+            $(`#chat-area #messages #${messageID} .embeds`).html("");
+            $(`#chat-area #messages #${messageID} .embeds`).append(generateEmbed(embed));
             let color = "";
             if(embed["theme-color"]) {
                 color = embed["theme-color"];
             } else {
                 color = "black";
             }
-            $(`#messages #${messageID} .embeds .color`).last().css({
+            $(`#chat-area #messages #${messageID} .embeds .color`).last().css({
                 "background-color": color
             });
         } else {
