@@ -2,9 +2,10 @@
 ==
 Create a free Roomber account and discover a new messaging app that's better than anything else out there. Roomber is a fun way to talk with your friends and stay connected.
 
-### Screenshots
+### Screenshot(s)
 
-![image](https://cdn.discordapp.com/attachments/881974256949395517/914605147450134568/unknown.png)
+![image](https://user-images.githubusercontent.com/89866735/145712496-0ae6d1f1-5e9b-4ad6-9c58-0260578f39ce.png)
+
 
 ### Roadmap
 
@@ -22,9 +23,10 @@ Remember to `npm install` before you try it!
 In the terminal, use
 `npx electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]`
 
-![Used NPM Package](https://www.npmjs.com/package/electron-packager)
+[Used NPM Package](https://www.npmjs.com/package/electron-packager)
 
-<span style="color:red;font-weight:bold">DISCLAIMER</span>
+### DISCLAIMER
+
 ALWAYS remember to put the compiled version in .gitignore
 
 ### Made by
