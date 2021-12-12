@@ -29,8 +29,6 @@ In the terminal, use
 
 ALWAYS remember to put the compiled version in .gitignore
 
-==
-
 ### Made by
 
 - neksodebe (Founder and Programmer)
