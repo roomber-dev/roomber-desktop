@@ -22,9 +22,9 @@ Remember to `npm install` before you try it!
 In the terminal, use
 `npx electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]`
 
-![Used NPM Package](https://www.npmjs.com/package/electron-packager)
+[Used NPM Package](https://www.npmjs.com/package/electron-packager)
 
-<span style="color:red;font-weight:bold">DISCLAIMER</span>
+### DISCLAIMER
 ALWAYS remember to put the compiled version in .gitignore
 
 ### Made by
