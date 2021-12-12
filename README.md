@@ -15,7 +15,7 @@ Create a free Roomber account and discover a new messaging app that's better tha
 - Desktop App
 - Mobile App
 
-===
+==
 ### How to compile
 
 Remember to `npm install` before you try it!
